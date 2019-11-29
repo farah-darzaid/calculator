@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"src="jquery.js"></script>
+	<script type="text/javascript">
+	$("document").ready(function() {
+		$(".plus").click(function() {
+			var first = $(".num1").val();
+			var second = $(".num2").val();
+			var result = parseInt(first) + parseInt(second);
+			
+			$(".result").val(result);
+			$("#result").html(result);
+		});
+
+		$(".minus").click(function() {
+		var first = $(".num1").val();
+		var second = $(".num2").val();
+		var result = parseInt(first) - parseInt(second);		
+		$(".result").val(result);
+	});
+
+	$(".multiple").click(function() {
+		var first = $(".num1").val();
+		var second = $(".num2").val();
+		var result = parseInt(first) * parseInt(second);		
+		$(".result").val(result);
+	});
+
+	$(".division").click(function() {
+		var first = $(".num1").val();
+		var second = $(".num2").val();
+		var result = parseInt(first) / parseInt(second);		
+		$(".result").val(result);
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="calc">	
+				<label>Num1 : </label>
+				<input type="number" name="num1" class="num1">
+				<br> <br><br>
+				<label>Num2 : </label>
+				<input type="number" name="num1" class="num2">
+
+				<button class="plus">+</button>
+				<button class="minus">-</button>
+				<button class="multiple">*</button>
+				<button class="division">/</button>
+
+				<hr>
+				<label>Result : </label>
+				<input type="number" name="num1"class="result" readonly>
+				<h1 id="result"></h1>
+	
+		</div>
+</body>
+</html>
